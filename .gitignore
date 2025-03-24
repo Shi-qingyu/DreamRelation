@@ -1,9 +1,16 @@
 /.idea/
 
 # outputs
-/logs/
-/output/
-/res/
+logs
+res
+results
 
 # compiled files
 __pycache__/
+
+lora-weights
+data
+benchmark
+eval
+checkpoints
+config
