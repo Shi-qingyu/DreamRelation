@@ -43,6 +43,12 @@ Install the packages:
 pip install -r requirements.txt
 ```
 
+## Model Preparation
+```bash
+export HF_ENDPOINT=https://hf-mirror.com
+huggingface-cli download doge1516/MS-Diffusion --local-dir ~\.cache\huggingface\hub\
+```
+
 ## Data Preparation
 Please prepare datasets and organize them like the 
 following:
@@ -65,13 +71,15 @@ following:
 ```
 
 ## Training
-Please replace the model and data paths before running the script：
+<!-- Please replace the model and data paths before running the script：
 ```
 bash train.sh
-```
+``` -->
+The code will be release soon!!! Please stay tuned.
 
 ## Inference
-Please replace the model and data paths before running the script：
+<!-- Please replace the model and data paths before running the script：
 ```
 python inference.py
-```
+``` -->
+The code will be release soon!!! Please stay tuned.
