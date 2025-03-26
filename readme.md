@@ -2,15 +2,15 @@
 <p align="center">
   <h1 align="center">DreamRelation: Bridging Customization and Relation Generaion [CVPR 2025]</h1>
   <p align="center">
-    <a href="https://scholar.google.com/citations?user=8bBcL9sAAAAJ&hl=en"><strong>Qingyu Shi</strong></a>
+    <a href="https://scholar.google.com.hk/citations?user=VpSqhJAAAAAJ&hl=zh-CN"><strong>Qingyu Shi</strong></a>
     ·
     <a href="http://luqi.info/"><strong>Lu Qi</strong></a>
     ·
-    <a href="https://qingyushi.github.io"><strong>Jianzong Wu</strong></a>
+    <a href="https://jianzongwu.github.io/"><strong>Jianzong Wu</strong></a>
     ·
-    <a href="http://luqi.info/"><strong>Jinbin Bai</strong></a>
+    <a href="https://noyii.github.io/"><strong>Jinbin Bai</strong></a>
     ·
-    <a href="https://scholar.google.co.uk/citations?user=GStTsxAAAAAJ&hl=zh-CN"><strong>Jingbo Wang</strong></a>
+    <a href="https://wangjingbo1219.github.io/"><strong>Jingbo Wang</strong></a>
     ·
     <a href="https://scholar.google.com/citations?user=T4gqdPkAAAAJ&hl=zh-CN"><strong>Yunhai Tong</strong></a>
     ·
