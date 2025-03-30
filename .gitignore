@@ -9,7 +9,6 @@ results
 __pycache__/
 
 lora-weights
-data
 benchmark
 eval
 checkpoints

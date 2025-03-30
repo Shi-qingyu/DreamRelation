@@ -1,9 +1,9 @@
 export PYTHONPATH=.
 export MODEL_NAME="/data00/sqy/checkpoints/stable-diffusion-xl-base-1.0"
 export INSTANCE_DIR="./data/hug"
-export OUTPUT_DIR="./lora-weights/lora-trained-xl-hugging-0.001kp-0.001cal-0.6"
+export OUTPUT_DIR="./lora-weights/lora-trained-xl-hugging-0.01kp-0.001cal-0.6"
 
-accelerate launch scripts/train_keypoints.py \
+accelerate launch scripts/train.py \
   --pretrained_model_name_or_path=$MODEL_NAME \
   --instance_data_dir=$INSTANCE_DIR \
   --output_dir=$OUTPUT_DIR \

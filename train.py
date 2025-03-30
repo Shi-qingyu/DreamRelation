@@ -812,8 +812,10 @@ def main(args):
     adapter_modules.load_state_dict(ms_adapter_state_dict)
     
     clip_model_name_or_path = "/data00/sqy/checkpoints/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k"
+    clipself_pretrained = "/data00/sqy/checkpoints/epoch_6.pt"
     image_encoder = MSDiffusionImageEncoder(
         clip_model_name_or_path,
+        clipself_pretrained=clipself_pretrained,
         dim=1280,
         depth=4,
         dim_head=64,
@@ -1272,7 +1274,8 @@ def main(args):
 
                 # Convert images to latent space
                 model_input = vae.encode(pixel_values).latent_dist.sample()
-                concept_latents = vae.encode(concept_images_for_vae.flatten(0, 1)).latent_dist.sample() * vae.config.scaling_factor
+                concept_latents = vae.encode(concept_images_for_vae.flatten(0, 1)).latent_dist.sample() 
+                concept_latents = concept_latents * vae.config.scaling_factor
                 concept_latents = concept_latents.reshape(bsz, -1, *model_input.shape[-3:])
                 concept_latents = concept_latents.permute(0, 1, 3, 4, 2)
 
@@ -1424,7 +1427,7 @@ def main(args):
                             concept_keypoint_latents = concept_latents[batch_ids, concept_ids, h_coord, w_coord] # (b * n * 17, 4)
                             
                             keypoints_loss = F.mse_loss(concept_keypoint_latents.float(), gt_keypoint_latents.float(), reduction="mean")
-                            loss = loss + 0.001 * keypoints_loss                         
+                            loss = loss + 0.01 * keypoints_loss                         
 
                         num_layers = len(attn_store)
                         cross_attention_loss = 0
