@@ -1,0 +1,22 @@
+{
+    "0": {
+        "prompt": "A wolf shakes hands with a leopard.",
+        "entities": ["wolf", "leopard"]
+    },
+    "1": {
+        "prompt": "A polar bear shakes hands with a lion.",
+        "entities": ["polar bear", "lion"]
+    },
+    "2": {
+        "prompt": "A bear shakes hands with a tiger.",
+        "entities": ["bear", "tiger"]
+    },
+    "3": {
+        "prompt": "A raccoon and a sloth are shaking hands.",
+        "entities": ["raccoon", "sloth"]
+    },
+    "4": {
+        "prompt": "A tiger is shaking hands with a goat.",
+        "entities": ["tiger", "goat"]
+    }
+}
