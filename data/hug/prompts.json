@@ -1,0 +1,27 @@
+{
+    "0": {
+        "prompt": "A lion and a polar bear hug.",
+        "entities": ["lion", "polar bear"],
+        "predicate": ["hug"]
+    },
+    "1": {
+        "prompt": "A wolf and a leopard hug.",
+        "entities": ["wolf", "leopard"],
+        "predicate": ["hug"]
+    },
+    "2": {
+        "prompt": "A bear is hugging a tiger.",
+        "entities": ["bear", "tiger"],
+        "predicate": ["hugging"]
+    },
+    "3": {
+        "prompt": "A kangaroo is hugging with a chimpanzee.",
+        "entities": ["kangaroo", "chimpanzee"],
+        "predicate": ["hugging"]
+    },
+    "4": {
+        "prompt": "A raccoon hugs a sloth.",
+        "entities": ["raccoon", "sloth"],
+        "predicate": ["hugs"]
+    }
+}
