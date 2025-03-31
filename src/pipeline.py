@@ -206,6 +206,8 @@ class Pipeline(StableDiffusionXLPipeline):
                 # write in this way to promise it can be extended to batch in the future
                 phrase_input_ids = []
                 for phrase in phrases:
+                    if not isinstance(phrase, list):
+                        phrase = list(phrase)
                     phrase_input_id = self.tokenizer(phrase, 
                                                      max_length=self.tokenizer.model_max_length,
                                                      padding="max_length", 
