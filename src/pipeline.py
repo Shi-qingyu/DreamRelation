@@ -6,7 +6,7 @@ from diffusers.pipelines.stable_diffusion_xl.pipeline_output import StableDiffus
 from diffusers.pipelines.stable_diffusion_xl.pipeline_stable_diffusion_xl import StableDiffusionXLPipeline, rescale_noise_cfg, retrieve_timesteps
 
 
-class MSDiffusionPipeline(StableDiffusionXLPipeline):
+class Pipeline(StableDiffusionXLPipeline):
     def __init__(
         self,
         vae,

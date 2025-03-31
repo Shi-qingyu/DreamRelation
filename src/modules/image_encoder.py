@@ -1,6 +1,8 @@
 from .projection import Resampler
 from .open_clip.factory import create_model_and_transforms
 
+import os
+
 import torch
 from torch import nn
 from transformers import CLIPVisionModelWithProjection
@@ -34,7 +36,7 @@ def generate_bboxes(n):
     return bboxes
 
 
-class MSDiffusionImageEncoder(ModelMixin, ConfigMixin):
+class ImageEncoder(ModelMixin, ConfigMixin):
     def __init__(
         self, 
         clip_model_name_or_path,
@@ -57,7 +59,8 @@ class MSDiffusionImageEncoder(ModelMixin, ConfigMixin):
         self.clip_model = CLIPVisionModelWithProjection.from_pretrained(
             clip_model_name_or_path
         )
-        if clipself_pretrained is not None:
+        if clipself_pretrained is not None and os.path.exists(clipself_pretrained):
+            print("loading local image encoder...")
             model, preprocess_train, preprocess_val = create_model_and_transforms(
                 model_name="ViT-bigG-14",
                 pretrained=clipself_pretrained,
