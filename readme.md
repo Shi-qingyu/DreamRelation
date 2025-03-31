@@ -70,6 +70,7 @@ following:
 ## Training
 Please replace the model and data paths before running the script：
 ```
+accelerate config
 bash train.sh
 ```
 <!-- The code will be release soon!!! Please stay tuned. -->
