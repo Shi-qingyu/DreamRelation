@@ -19,11 +19,11 @@
      PKU, Insta360 Research, NTU, NUS, Shanghai AI
   </p>
 
-  <p align="center">
+  <div align="center">
     <a href='https://arxiv.org/pdf/2410.23280'><img src="https://img.shields.io/static/v1?label=ArXiv&message=2406.07209&color=B31B1B&logo=arxiv"></a> &ensp;
-    <a href='https://shi-qingyu.github.io/DreamRelation.github.io/'><img src="https://img.shields.io/static/v1?label=Project%20Page&message=GitHub&color=blue&logo=github"> </a> &ensp;
-    <a href='https://huggingface.co/QingyuShi/DreamRelation'><img src="https://img.shields.io/static/v1?label=Model Weights&message=HuggingFace&color=yellow"> </a> &ensp;
-  </p>
+    <a href='https://shi-qingyu.github.io/DreamRelation.github.io/'><img src="https://img.shields.io/static/v1?label=Project%20Page&message=GitHub&color=blue&logo=github"></a> &ensp;
+    <a href='https://huggingface.co/QingyuShi/DreamRelation'><img src="https://img.shields.io/static/v1?label=Model Weights&message=HuggingFace&color=yellow"></a> &ensp;
+  </div>
 <br/>
 
 ## Introduction
