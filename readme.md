@@ -52,7 +52,7 @@ following:
 
 ```text
 ├── data
-    ├── shaking_hands
+    ├── hug
         ├── videos
             ├── 0
                 ├──concept0.png
