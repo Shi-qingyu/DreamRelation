@@ -69,7 +69,7 @@ following:
 ```
 
 ## Training
-Please config your accelerate before running the script, we recommand to use two GPUs for training:
+Please configure your Accelerate settings before running the script. We recommend using two GPUs for training.
 ```bash
 accelerate config
 ```
