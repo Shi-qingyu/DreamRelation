@@ -43,6 +43,7 @@ pip install -r requirements.txt
 ## Model Preparation
 ```bash
 export HF_ENDPOINT=https://hf-mirror.com
+mkdir checkpoints
 huggingface-cli download doge1516/MS-Diffusion --local-dir ./checkpoints/MS-Diffusion
 ```
 
@@ -68,16 +69,20 @@ following:
 ```
 
 ## Training
-Please replace the model and data paths before running the script：
-```
+Please config your accelerate before running the script, we recommand to use two GPUs for training:
+```bash
 accelerate config
+```
+Please replace the model and data paths before running the script：
+```bash
+mkdir lora-weights
 bash train.sh
 ```
 <!-- The code will be release soon!!! Please stay tuned. -->
 
 ## Inference
 Please replace the model and data paths before running the script：
-```
+```bash
 python inference.py --config config/example_two_objects.yaml
 ```
 <!-- The code will be release soon!!! Please stay tuned. -->
