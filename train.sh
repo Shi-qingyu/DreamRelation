@@ -2,6 +2,7 @@ export PYTHONPATH=.
 export MODEL_NAME="stabilityai/stable-diffusion-xl-base-1.0"
 export INSTANCE_DIR="./data/hug"
 export OUTPUT_DIR="./lora-weights/lora-trained-xl-hugging-0.1kp-0.001cal-0.6"
+export HF_ENDPOINT="https://hf-mirror.com"
 
 accelerate launch scripts/train.py \
   --pretrained_model_name_or_path=$MODEL_NAME \
