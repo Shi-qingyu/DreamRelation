@@ -2,13 +2,15 @@
 
 # outputs
 logs
-res
+wandb
+outputs
 results
 
 # compiled files
 __pycache__/
 
 lora-weights
-benchmark
+checkpoints
+
 eval
-checkpoints/MS-Diffusion
+benchmark
