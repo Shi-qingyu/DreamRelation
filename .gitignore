@@ -11,5 +11,4 @@ __pycache__/
 lora-weights
 benchmark
 eval
-checkpoints
-config
+checkpoints/MS-Diffusion

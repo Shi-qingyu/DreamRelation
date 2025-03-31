@@ -65,9 +65,9 @@ from diffusers.utils.hub_utils import load_or_create_model_card, populate_model_
 from diffusers.utils.import_utils import is_xformers_available
 from diffusers.utils.torch_utils import is_compiled_module
 
-from src.pipeline import MSDiffusionPipeline
+from src.pipeline import Pipeline
 from src.dataset.data import KeypointsDataset
-from src.modules.image_encoder import MSDiffusionImageEncoder
+from src.modules.image_encoder import ImageEncoder
 from src.modules.attention_processor import MaskedIPAttnProcessor2_0 as IPAttnProcessor, AttnProcessor2_0 as AttnProcessor
 from src.utils import get_phrase_idx
 
@@ -793,7 +793,7 @@ def main(args):
     if hasattr(vae.config, "latents_std") and vae.config.latents_std is not None:
         latents_std = torch.tensor(vae.config.latents_std).view(1, 4, 1, 1)
 
-    ms_ckpt = "/data00/sqy/checkpoints/MS-Diffusion/ms_adapter.bin"
+    ms_ckpt = "./checkpoints/MS-Diffusion/ms_adapter.bin"
     ms_state_dict = torch.load(ms_ckpt)
     image_encoder_state_dict = {}
     for key, value in ms_state_dict.items():
@@ -811,9 +811,9 @@ def main(args):
     adapter_modules, attn_store = set_ms_adapter(unet, scale=0.6)
     adapter_modules.load_state_dict(ms_adapter_state_dict)
     
-    clip_model_name_or_path = "/data00/sqy/checkpoints/laion/CLIP-ViT-bigG-14-laion2B-39B-b160k"
-    clipself_pretrained = "/data00/sqy/checkpoints/epoch_6.pt"
-    image_encoder = MSDiffusionImageEncoder(
+    clip_model_name_or_path = "laion/CLIP-ViT-bigG-14-laion2B-39B-b160k"
+    clipself_pretrained = "./checkpoints/local_image_encoder/epoch_6.pt"
+    image_encoder = ImageEncoder(
         clip_model_name_or_path,
         clipself_pretrained=clipself_pretrained,
         dim=1280,
@@ -934,7 +934,7 @@ def main(args):
                 # make sure to pop weight so that corresponding model is not saved again
                 weights.pop()
 
-            MSDiffusionPipeline.save_lora_weights(
+            Pipeline.save_lora_weights(
                 output_dir,
                 unet_lora_layers=unet_lora_layers_to_save,
                 text_encoder_lora_layers=text_encoder_one_lora_layers_to_save,
@@ -1427,7 +1427,7 @@ def main(args):
                             concept_keypoint_latents = concept_latents[batch_ids, concept_ids, h_coord, w_coord] # (b * n * 17, 4)
                             
                             keypoints_loss = F.mse_loss(concept_keypoint_latents.float(), gt_keypoint_latents.float(), reduction="mean")
-                            loss = loss + 0.01 * keypoints_loss                         
+                            loss = loss + 0.1 * keypoints_loss                         
 
                         num_layers = len(attn_store)
                         cross_attention_loss = 0
@@ -1548,7 +1548,7 @@ def main(args):
             text_encoder_lora_layers = None
             text_encoder_2_lora_layers = None
 
-        MSDiffusionPipeline.save_lora_weights(
+        Pipeline.save_lora_weights(
             save_directory=args.output_dir,
             unet_lora_layers=unet_lora_layers,
             text_encoder_lora_layers=text_encoder_lora_layers,

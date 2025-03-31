@@ -1,0 +1,16 @@
+lora_weights: "lora-weights/lora-trained-xl-hugging-0.1kp-0.001cal-0.6/pytorch_lora_weights.safetensors"
+class_names:
+  - "dog"
+  - "cat"
+  - "plushie bear"
+prompt: "A cat is hugging with a dog and a plushie bear."
+images_path:
+  - "assets/image_prompts/dog.jpg"
+  - "assets/image_prompts/cat_2.jpg"
+  - "assets/image_prompts/plushie_bear.jpg"
+boxes:
+  - - [0.0, 0.2, 0.45, 0.85]
+    - [0.45, 0.2, 0.7, 0.85]
+    - [0.55, 0.25, 0.95, 0.9]
+phrases:
+  - ["dog", "cat", "plushie bear"]

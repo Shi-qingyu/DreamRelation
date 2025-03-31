@@ -20,12 +20,9 @@
   </p>
 
   <p align="center">
-    <a href='https://arxiv.org/pdf/2410.23280'>
-      <img src='https://img.shields.io/badge/Paper-PDF-green?style=flat&logo=arXiv&logoColor=green' alt='arXiv PDF'> </a>
-    <a href='https://shi-qingyu.github.io/DreamRelation.github.io/' style='padding-left: 0.5rem;'>
-      <img src='https://img.shields.io/badge/Project-Page-blue?style=flat&logo=Google%20chrome&logoColor=blue' alt='Project Page'> </a>
-    <!-- <a href='https://huggingface.co/spaces/shilinxu/rap-sam' style='padding-left: 0.5rem;'>
-      <img src='https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-App-blue' alt='HuggingFace Model'> </a> -->
+    <a href='https://arxiv.org/pdf/2410.23280'><img src="https://img.shields.io/static/v1?label=ArXiv&message=2406.07209&color=B31B1B&logo=arxiv"></a> &ensp;
+    <a href='https://shi-qingyu.github.io/DreamRelation.github.io/'><img src="https://img.shields.io/static/v1?label=Project%20Page&message=GitHub&color=blue&logo=github"> </a> &ensp;
+    <a href='https://huggingface.co/QingyuShi/DreamRelation'><img src="https://img.shields.io/static/v1?label=Model Weights&message=HuggingFace&color=yellow"> </a> &ensp;
   </p>
 <br/>
 
@@ -46,7 +43,7 @@ pip install -r requirements.txt
 ## Model Preparation
 ```bash
 export HF_ENDPOINT=https://hf-mirror.com
-huggingface-cli download doge1516/MS-Diffusion --local-dir ~\.cache\huggingface\hub\
+huggingface-cli download doge1516/MS-Diffusion --local-dir ./checkpoints/MS-Diffusion
 ```
 
 ## Data Preparation
@@ -71,18 +68,18 @@ following:
 ```
 
 ## Training
-<!-- Please replace the model and data paths before running the script：
+Please replace the model and data paths before running the script：
 ```
 bash train.sh
-``` -->
-The code will be release soon!!! Please stay tuned.
+```
+<!-- The code will be release soon!!! Please stay tuned. -->
 
 ## Inference
-<!-- Please replace the model and data paths before running the script：
+Please replace the model and data paths before running the script：
 ```
-python inference.py
-``` -->
-The code will be release soon!!! Please stay tuned.
+python inference.py --config config/example_two_objects.yaml
+```
+<!-- The code will be release soon!!! Please stay tuned. -->
 
 ## Citation
 ```
