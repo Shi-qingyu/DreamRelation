@@ -81,7 +81,7 @@ bash train.sh
 <!-- The code will be release soon!!! Please stay tuned. -->
 
 ## Inference
-Please replace the model and data paths before running the script：
+Please replace the model and data paths before running the script, you can also download checkpoints from [here](https://huggingface.co/QingyuShi/DreamRelation)：
 ```bash
 python inference.py --config config/example_two_objects.yaml
 ```
