@@ -22,7 +22,6 @@
   <div align="center">
     <a href='https://arxiv.org/pdf/2410.23280'><img src="https://img.shields.io/static/v1?label=ArXiv&message=2410.23280&color=B31B1B&logo=arxiv"></a> &ensp;
     <a href='https://shi-qingyu.github.io/DreamRelation.github.io/'><img src="https://img.shields.io/static/v1?label=Project%20Page&message=GitHub&color=blue&logo=github"></a> &ensp;
-    <a href='https://huggingface.co/QingyuShi/DreamRelation'><img src="https://img.shields.io/static/v1?label=Model Weights&message=HuggingFace&color=yellow"></a> &ensp;
     <a href='https://huggingface.co/datasets/QingyuShi/RelationBench'><img src="https://img.shields.io/static/v1?label=RelationBench&message=HuggingFace&color=yellow"></a> &ensp;
   </div>
 <br/>
