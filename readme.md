@@ -91,9 +91,9 @@ python inference.py --config config/example_two_objects.yaml
 ## Citation
 ```
 @inproceedings{DreamRelation,
-  title={DreamRelation: Bridging Customization and Relation Generaion},
-  author={Qingyu Shi, Lu Qi, Jianzong Wu, Jinbin Bai, Jingbo Wang, Yunhai Tong, Xiangtai Li},
-  booktitle={CVPR},
-  year={2025}
+  title     = {DreamRelation: Bridging Customization and Relation Generation},
+  author    = {Shi, Qingyu and Qi, Lu and Wu, Jianzong and Bai, Jinbin and Wang, Jingbo and Tong, Yunhai and Li, Xiangtai},
+  booktitle = {CVPR},
+  year      = {2025}
 }
 ```
